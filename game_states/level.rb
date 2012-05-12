@@ -1,4 +1,5 @@
 class Level < GameState  
+  traits :viewport
   def setup
     self.input = {:escape => :exit, :e => :edit }
     
@@ -6,10 +7,13 @@ class Level < GameState
     load_game_objects(:file => @file)
     
     @grid = [10,10]
+    
+    @player = Player.create(:x => 100, :y => 200)
+    self.viewport.center_around(@player)
   end
   
   def edit
-    push_game_state GameStates::Edit.new(:grid => @grid, :file => @file)
+    push_game_state GameStates::Edit.new(:grid => @grid, :except =>[Player], :file => @file)
   end
   
   def update
