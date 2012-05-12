@@ -5,6 +5,7 @@ include Chingu
 
 require_rel 'game_objects/*'
 require_rel 'game_states/*'
+require_rel 'midi_player'
 
 class Game < Window
   def intialize
