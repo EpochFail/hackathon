@@ -7,6 +7,7 @@ GEM
     chingu (0.9rc8)
       gosu (>= 0.7.43)
       gosu (>= 0.7.43)
+    ffi-fluidsynth (0.0.1)
     gosu (0.7.43)
 
 PLATFORMS
@@ -14,3 +15,4 @@ PLATFORMS
 
 DEPENDENCIES
   chingu (= 0.9rc8)
+  ffi-fluidsynth

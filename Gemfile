@@ -4,3 +4,4 @@ source :rubyforge
 source "http://gems.rubyforge.org"
 
 gem 'chingu', '0.9rc8'
+gem 'ffi-fluidsynth'
