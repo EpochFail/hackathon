@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  remote: http://rubygems.org/
+  remote: http://rubygems.org/
+  remote: http://gems.rubyforge.org/
+  specs:
+    chingu (0.9rc8)
+      gosu (>= 0.7.43)
+      gosu (>= 0.7.43)
+    gosu (0.7.43)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  chingu (= 0.9rc8)
