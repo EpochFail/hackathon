@@ -18,6 +18,7 @@ class Player < GameObject
     
     @speed = 3
     @jumping = false
+    @jump_count = 0
     
     self.zorder = 300
     self.factor = 1
@@ -41,10 +42,17 @@ class Player < GameObject
   end
 
   def jump
-    return if @jumping
-    @jumping = true
-    self.velocity_y = -10
-    @animation = @animations[:jumping]
+    if @jumping
+      @jump_count += 1
+
+      return if @jump_count > 3
+
+      self.velocity_y = -10
+    else
+      @jumping = true
+      self.velocity_y = -10
+      @animation = @animations[:jumping]
+    end
   end
   
   def use
@@ -78,6 +86,7 @@ class Player < GameObject
         self.velocity_y = 0
       else  # Land on ground
         @jumping = false        
+        @jump_count = 0
         me.y = stone_wall.bb.top-1
       end
     end
