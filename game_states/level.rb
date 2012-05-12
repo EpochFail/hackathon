@@ -1,6 +1,6 @@
 class Level < GameState  
   def setup
-    self.input = {:escape => :exit} 
+    self.input = {:escape => :exit, :e => :edit } 
   end
   
   def update
